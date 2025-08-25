@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Link - Dev</title>
+        <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='favicons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='favicons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='favicons/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static',filename='favicons/site.webmanifest') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="{{ url_for('static',filename='js/script.js') }}" defer></script>
+    </head>
+
+    <body>
+        <header><audio id="zelda" autoplay preload="metadata" src="https://zeldauniverse.s3.amazonaws.com/soundtracks/thewindwakerost/cd1/The_Legend_of_Zelda_-_The_Wind_Waker_-_01_-_Title.mp3"></audio></header>
+        <div class="card">
+            <div class="statuts">
+                <img id="icon" class="icon" src="{{ url_for('static',filename='images/pdp.jfif') }}"/>
+                <h1 class="pseudo"><span class="gold-text">Link</span></h1>
+            </div>
+            <p class="text">
+                Salut moi c'est Link, je suis <span class="gold-text">développeur débutant</span> en python.<br>
+                J'ai plusieurs liens qui peuvent être utiles...
+            </p>
+            <ul class="buttons">
+                <li><a class="button gmail" href="mailto:mc.link34500@gmail.com" target="_blank"><img src="{{ url_for('static',filename='images/mail.svg') }}" alt="Logo de gmail SVG"/></a></li>
+                <li><a class="button discord" href="https://discord.gg/KpdPY84jBk" target="_blank"><img src="{{ url_for('static',filename='images/discord.svg') }}" alt="Logo de discord SVG"/></a></li>
+                <li><a class="button github" href="https://github.com/Link34500" target="_blank"><img src="{{ url_for('static',filename='images/github-white-icon.svg') }}" alt="Logo de Github SVG"/></a></li>
+                <li><a class="button ko-fi" href="https://ko-fi.com/Link34500" target="_blank"><img src="{{ url_for('static',filename='images/kofi_symbol.svg') }}"/></a></li>
+            </ul>
+        </div>
+        <footer class="footer"><p>© 2025 - Tout droits réservés</p></footer>
+    </body>
+</html>
