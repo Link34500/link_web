@@ -21,4 +21,4 @@ USER appuser
 
 EXPOSE 5000
 
-CMD [ "gunicorn","--bind","unix:link_web.sock","wsgi:app"]
+CMD ["gunicorn", "-w 4", "-b 0.0.0.0:5000", "wsgi:app"]
