@@ -13,13 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN useradd appuser
-RUN chown -R appuser /app/
-RUN chmod u=rx /app/
-
-USER appuser
-
 
 EXPOSE 5000
 
-CMD ["gunicorn", "-w 4", "-b 0.0.0.0:5000", "wsgi:app"]
+CMD ["gunicorn" ,"--workers" ,"3","--bind" ,"unix:link_web.sock", "wsgi:app"]
