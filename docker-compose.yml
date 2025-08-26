@@ -5,6 +5,8 @@ services:
     volumes:
       - .:/app
     restart: unless-stopped
+    networks:
+      - webnet
 
   nginx:
     image: nginx:latest
